@@ -48,10 +48,10 @@ public abstract class Cliente implements NumeroDocumento {
     @Override
     public String toString() {
         return "Cliente{" +
-                "nome='" + nome + '\'' +
-                ", numeroDoDocumento='" + numeroDoDocumento + '\'' +
-                ", email='" + email + '\'' +
-                ", tipoDeCliente=" + tiposDeCliente.tipoCliente +
+                "nome = " + nome + '\'' +
+                ", numeroDoDocumento = " + numeroDoDocumento + '\'' +
+                ", email = " + email + '\'' +
+                ", tipoDeCliente = " + tiposDeCliente.tipoCliente +
                 '}';
     }
 }
