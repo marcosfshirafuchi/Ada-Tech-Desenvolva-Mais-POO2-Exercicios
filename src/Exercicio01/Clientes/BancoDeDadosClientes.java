@@ -15,5 +15,6 @@ public class BancoDeDadosClientes {
         for (Cliente clienteCadastrado: listaDeClientes){
             System.out.println(clienteCadastrado);
         }
+        System.out.println();
     }
 }

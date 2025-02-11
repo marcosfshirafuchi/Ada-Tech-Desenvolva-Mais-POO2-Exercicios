@@ -13,8 +13,4 @@ public class PessoaJuridica extends Cliente {
                 numeroDodocumento.substring(12, 14));
     }
 
-    @Override
-    public boolean validaDocumento(String numeroDodocumento) {
-        return false;
-    }
 }

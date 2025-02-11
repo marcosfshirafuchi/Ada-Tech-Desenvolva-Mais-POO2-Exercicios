@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static Exercicio01.Clientes.BancoDeDadosClientes.registrarClientes;
 import static Exercicio01.Clientes.BancoDeDadosClientes.relatorioClienteCadastrados;
 import static Exercicio01.Clientes.CadastrarCliente.cadastrarPessoaFisica;
 import static Exercicio01.Clientes.CadastrarCliente.cadastrarPessoaJuridica;
@@ -19,23 +20,29 @@ public class Main {
         Cliente pessoaFisica = null;
         Cliente pessoaJuridica = null;
         boolean loop = true;
+        int tipoPessoa;
         while (loop){
+            System.out.println();
             System.out.println("*********MERCADO LIVRE*******");
-            System.out.println("CADASTRO DE CLIENTES");
-            System.out.println("1 - Pessoa Física");
-            System.out.println("2 - Pessoa Jurídica");
+            System.out.println("********OPÇÕES DO MENU**********");
+            System.out.println("1 - Cadastro de Pessoa Física");
+            System.out.println("2 - Cadastro de Pessoa Jurídica");
             System.out.println("3 - Impressão dos Clientes Cadastrados");
             System.out.println("4 - Sair");
+            System.out.println("*****************************");
+            System.out.println();
             System.out.print("Digite opção desejada: ");
-            int tipoPessoa = scanner.nextInt();
+            tipoPessoa = scanner.nextInt();
             scanner.nextLine();
-            String nome, numeroDoDocumento, email;
+            System.out.println();
             switch (tipoPessoa){
                 case 1:
-                    cadastrarPessoaFisica();
+                    pessoaFisica = cadastrarPessoaFisica();
+                    registrarClientes(pessoaFisica);
                     break;
                 case 2:
-                    cadastrarPessoaJuridica();
+                    pessoaJuridica = cadastrarPessoaJuridica();
+                    registrarClientes(pessoaJuridica);
                     break;
                 case 3:
                     relatorioClienteCadastrados();
